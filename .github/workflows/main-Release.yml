@@ -1,0 +1,51 @@
+name: Package and Publish 'Main' to GitHub and NuGet
+
+on:
+ push:
+  branches: ['main']
+
+env:
+ SourceDirectory: '${{ github.workspace }}/source'
+    
+jobs:
+ build:
+  strategy:
+   matrix:
+    project: ['BenBurgers.FormalLanguagesAutomata', 'BenBurgers.FormalLanguagesAutomata.Grammars']
+  runs-on: ubuntu-latest
+  permissions:
+   contents: read
+   packages: write
+
+  steps:
+   - name: Checkout repository
+     uses: actions/checkout@v3
+   - name: Setup .NET SDK 7.0.x
+     uses: actions/setup-dotnet@v3
+     with:
+      dotnet-version: 7.0.x
+   - name: Cache dependencies
+     uses: actions/cache@v3
+     with:
+      path: ~/.nuget/packages
+      key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+      restore-keys: |
+       ${{ runner.os }}-nuget
+   - name: Install dependencies
+     working-directory: ${{ env.SourceDirectory }}
+     run: dotnet restore
+   - name: Build
+     working-directory: ${{ env.SourceDirectory }}
+     run: dotnet build --configuration Release --no-restore
+   - name: Test
+     working-directory: ${{ env.SourceDirectory }}
+     run: dotnet test --configuration Release --no-restore --no-build --verbosity normal
+   - name: Create the package 'BenBurgers.FormalLanguagesAutomata'
+     working-directory: ${{ env.SourceDirectory }}/${{ matrix.project }}
+     run: dotnet pack --configuration Release -p:PackageVersion=0.5.${{ github.run_number }}
+   - name: Publish the package to GitHub Packages Registry
+     working-directory: ${{ env.SourceDirectory }}/${{ matrix.project }}
+     run: dotnet nuget push ${{ env.SourceDirectory }}/${{ matrix.project }}/bin/Release/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "GitHub BenBurgers" --skip-duplicate
+   - name: Publish the package to NuGet.org
+     working-directory: ${{ env.SourceDirectory }}/${{ matrix.project }}
+     run: dotnet nuget push ${{ env.SourceDirectory }}/${{ matrix.project }}/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_ACCESSTOKEN }} --source "NuGet" --skip-duplicate

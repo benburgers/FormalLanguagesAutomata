@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup Label="Project Settings">
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Authors>benburgers</Authors>
+		<Product>Formal Languages and Automata</Product>
+		<Description>Formal grammars according to formal languages and automata theory in Computer Science.</Description>
+		<Copyright>© 2022-2023 Ben Burgers and contributors</Copyright>
+		<RepositoryUrl>https://github.com/benburgers/FormalLanguagesAutomata</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/benburgers/FormalLanguagesAutomata</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReleaseNotes>The first full release with open source.</PackageReleaseNotes>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageTags>Formal Languages and Automata; Formal Languages; Automata; Automaton; Parsing; Grammars</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup Label="References">
+		<ProjectReference Include="..\BenBurgers.FormalLanguagesAutomata\BenBurgers.FormalLanguagesAutomata.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Label="Resources">
+		<EmbeddedResource Update="**\Exceptions\ExceptionMessages.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="**\Exceptions\ExceptionMessages.*.resx">
+			<DependentUpon>ExceptionMessages.resx</DependentUpon>
+		</EmbeddedResource>
+		<Compile Update="**\Exceptions\ExceptionMessages.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ExceptionMessages.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup Label="Documentation">
+		<Content Include="..\..\LICENSE" Link="LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</Content>
+		<Content Include="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</Content>
+	</ItemGroup>
+
+</Project>

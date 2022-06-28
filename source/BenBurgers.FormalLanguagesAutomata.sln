@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Documentation", ".Documentation", "{DCCECCD1-85E7-4864-9773-A46142C839C9}"
+	ProjectSection(SolutionItems) = preProject
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Grammars", "Grammars", "{F325F0F9-B54A-487F-A6C6-8C8BAE28CA1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.FormalLanguagesAutomata.Grammars", "BenBurgers.FormalLanguagesAutomata.Grammars\BenBurgers.FormalLanguagesAutomata.Grammars.csproj", "{4EDC4F4C-70E0-4755-BF02-2BBF7F8395F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.FormalLanguagesAutomata", "BenBurgers.FormalLanguagesAutomata\BenBurgers.FormalLanguagesAutomata.csproj", "{EE388E82-1C89-43D4-BA26-FA17E15D8036}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.FormalLanguagesAutomata.Grammars.Tests", "BenBurgers.FormalLanguagesAutomata.Grammars.Tests\BenBurgers.FormalLanguagesAutomata.Grammars.Tests.csproj", "{B38E1C8B-98FA-4F1D-BFF7-2CF7BEA71EC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Git", ".Git", "{1B2D4000-3C5C-48E7-AFB3-AF795114B768}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NuGet", ".NuGet", "{4E082DF4-303D-4478-A4F9-DECE78ED4DBE}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.config = NuGet.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".GitHub", ".GitHub", "{198B36B8-5413-4DE9-B779-69CFC0BDE604}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{14ACB701-06FE-4A6B-B543-5C0CB9FF3131}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\main-Release.yml = ..\.github\workflows\main-Release.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EDC4F4C-70E0-4755-BF02-2BBF7F8395F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EDC4F4C-70E0-4755-BF02-2BBF7F8395F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EDC4F4C-70E0-4755-BF02-2BBF7F8395F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EDC4F4C-70E0-4755-BF02-2BBF7F8395F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE388E82-1C89-43D4-BA26-FA17E15D8036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE388E82-1C89-43D4-BA26-FA17E15D8036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE388E82-1C89-43D4-BA26-FA17E15D8036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE388E82-1C89-43D4-BA26-FA17E15D8036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B38E1C8B-98FA-4F1D-BFF7-2CF7BEA71EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B38E1C8B-98FA-4F1D-BFF7-2CF7BEA71EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B38E1C8B-98FA-4F1D-BFF7-2CF7BEA71EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B38E1C8B-98FA-4F1D-BFF7-2CF7BEA71EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4EDC4F4C-70E0-4755-BF02-2BBF7F8395F6} = {F325F0F9-B54A-487F-A6C6-8C8BAE28CA1F}
+		{B38E1C8B-98FA-4F1D-BFF7-2CF7BEA71EC1} = {F325F0F9-B54A-487F-A6C6-8C8BAE28CA1F}
+		{14ACB701-06FE-4A6B-B543-5C0CB9FF3131} = {198B36B8-5413-4DE9-B779-69CFC0BDE604}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77248AB0-6405-4E60-880B-75435BBFC2EC}
+	EndGlobalSection
+EndGlobal
