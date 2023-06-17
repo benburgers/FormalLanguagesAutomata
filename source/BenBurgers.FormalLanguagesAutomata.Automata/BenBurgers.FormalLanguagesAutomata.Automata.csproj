@@ -16,29 +16,14 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageReleaseNotes>The first full release with open source.</PackageReleaseNotes>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<PackageTags>Formal Languages and Automata; Formal Languages; Automata; Automaton; Parsing; Grammars</PackageTags>
+		<PackageTags>Formal Languages and Automata; Formal Languages; Automata; Automaton</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup Label="Package References">
 		<PackageReference Include="BenBurgers.FormalLanguagesAutomata" Version="0.5.*" />
 	</ItemGroup>
 
-	<ItemGroup Label="Resources">
-		<EmbeddedResource Update="**\Exceptions\ExceptionMessages.resx">
-			<Generator>ResXFileCodeGenerator</Generator>
-			<LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-		<EmbeddedResource Update="**\Exceptions\ExceptionMessages.*.resx">
-			<DependentUpon>ExceptionMessages.resx</DependentUpon>
-		</EmbeddedResource>
-		<Compile Update="**\Exceptions\ExceptionMessages.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>ExceptionMessages.resx</DependentUpon>
-		</Compile>
-	</ItemGroup>
-
-	<ItemGroup Label="Documentation">
+	<ItemGroup Label="Package">
 		<Content Include="..\..\LICENSE" Link="LICENSE">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
