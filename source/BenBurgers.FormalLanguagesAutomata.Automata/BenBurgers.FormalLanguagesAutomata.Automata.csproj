@@ -20,7 +20,7 @@
 	</PropertyGroup>
 
 	<ItemGroup Label="Package References">
-		<PackageReference Include="BenBurgers.FormalLanguagesAutomata" Version="0.5.*" />
+		<PackageReference Include="BenBurgers.FormalLanguagesAutomata" Version="0.5.10.4-beta" />
 	</ItemGroup>
 
 	<ItemGroup Label="Package">
@@ -32,6 +32,25 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
+	</ItemGroup>
+
+	<ItemGroup Label="Resources">
+		<EmbeddedResource Update="**\Exceptions\ExceptionMessages.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<Compile Update="**\Exceptions\ExceptionMessages.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ExceptionMessages.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="ContextSensitive\" />
+		<Folder Include="RecursivelyEnumerable\" />
+		<Folder Include="ContextSensitive\LBA\" />
+		<Folder Include="RecursivelyEnumerable\TuringMachine\" />
 	</ItemGroup>
 
 </Project>

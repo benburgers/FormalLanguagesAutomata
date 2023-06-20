@@ -19,10 +19,6 @@
 		<PackageTags>Formal Languages and Automata; Formal Languages; Automata; Automaton; Parsing; Grammars</PackageTags>
 	</PropertyGroup>
 
-	<ItemGroup Label="Package References">
-		<PackageReference Include="BenBurgers.FormalLanguagesAutomata" Version="0.5.*" />
-	</ItemGroup>
-
 	<ItemGroup Label="Resources">
 		<EmbeddedResource Update="**\Exceptions\ExceptionMessages.resx">
 			<Generator>ResXFileCodeGenerator</Generator>
@@ -47,6 +43,10 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="BenBurgers.FormalLanguagesAutomata" Version="0.5.10.4-beta" />
 	</ItemGroup>
 
 </Project>

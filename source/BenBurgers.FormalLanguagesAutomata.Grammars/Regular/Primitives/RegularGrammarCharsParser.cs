@@ -16,7 +16,7 @@
 using BenBurgers.FormalLanguagesAutomata.Grammars.Exceptions;
 using BenBurgers.FormalLanguagesAutomata.Grammars.Regular.Primitives.Exceptions;
 using BenBurgers.FormalLanguagesAutomata.Symbols;
-using BenBurgers.FormalLanguagesAutomata.Symbols.Primitives;
+using BenBurgers.FormalLanguagesAutomata.Symbols.Primitives.Char;
 using System.Collections.ObjectModel;
 
 namespace BenBurgers.FormalLanguagesAutomata.Grammars.Regular.Primitives;

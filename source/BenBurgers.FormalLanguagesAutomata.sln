@@ -31,12 +31,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".GitHub", ".GitHub", "{198B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{14ACB701-06FE-4A6B-B543-5C0CB9FF3131}"
 	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\main-PullRequest.yml = ..\.github\workflows\main-PullRequest.yml
 		..\.github\workflows\main-Release.yml = ..\.github\workflows\main-Release.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Automata", "Automata", "{FC1F1F47-59E0-45F8-BCCA-275D52FABD2E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.FormalLanguagesAutomata.Automata", "BenBurgers.FormalLanguagesAutomata.Automata\BenBurgers.FormalLanguagesAutomata.Automata.csproj", "{FD671224-9A7C-4EAA-8976-9F567691570E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Scripts", ".Scripts", "{85C7BF38-D403-4D72-B616-2DA8FDA0FA61}"
+	ProjectSection(SolutionItems) = preProject
+		..\scripts\Pack.ps1 = ..\scripts\Pack.ps1
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenBurgers.FormalLanguagesAutomata.Automata.Tests", "BenBurgers.FormalLanguagesAutomata.Automata.Tests\BenBurgers.FormalLanguagesAutomata.Automata.Tests.csproj", "{26A7E260-E597-496B-A6AA-632D25BDA778}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenBurgers.FormalLanguagesAutomata.Tests", "BenBurgers.FormalLanguagesAutomata.Tests\BenBurgers.FormalLanguagesAutomata.Tests.csproj", "{E9CEFCE8-9550-46DF-8E3B-7753A9C0A450}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +70,14 @@ Global
 		{FD671224-9A7C-4EAA-8976-9F567691570E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD671224-9A7C-4EAA-8976-9F567691570E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD671224-9A7C-4EAA-8976-9F567691570E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26A7E260-E597-496B-A6AA-632D25BDA778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26A7E260-E597-496B-A6AA-632D25BDA778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26A7E260-E597-496B-A6AA-632D25BDA778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26A7E260-E597-496B-A6AA-632D25BDA778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9CEFCE8-9550-46DF-8E3B-7753A9C0A450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9CEFCE8-9550-46DF-8E3B-7753A9C0A450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9CEFCE8-9550-46DF-8E3B-7753A9C0A450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9CEFCE8-9550-46DF-8E3B-7753A9C0A450}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +87,7 @@ Global
 		{B38E1C8B-98FA-4F1D-BFF7-2CF7BEA71EC1} = {F325F0F9-B54A-487F-A6C6-8C8BAE28CA1F}
 		{14ACB701-06FE-4A6B-B543-5C0CB9FF3131} = {198B36B8-5413-4DE9-B779-69CFC0BDE604}
 		{FD671224-9A7C-4EAA-8976-9F567691570E} = {FC1F1F47-59E0-45F8-BCCA-275D52FABD2E}
+		{26A7E260-E597-496B-A6AA-632D25BDA778} = {FC1F1F47-59E0-45F8-BCCA-275D52FABD2E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77248AB0-6405-4E60-880B-75435BBFC2EC}

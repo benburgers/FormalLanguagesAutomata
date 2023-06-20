@@ -13,38 +13,33 @@
  * If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace BenBurgers.FormalLanguagesAutomata.Symbols.Primitives;
+namespace BenBurgers.FormalLanguagesAutomata.Symbols.Primitives.Char;
 
 /// <summary>
-/// A terminal that contains a <see cref="char" /> value.
+/// A word with characters.
 /// </summary>
-public class CharTerminal
-    : Terminal<CharSymbol, char>
+public sealed class CharWord
+    : Word<CharSymbol, char>
 {
     /// <summary>
-    /// Initializes a new instance of <see cref="CharTerminal" />.
+    /// Initializes a new instance of <see cref="CharWord" />.
     /// </summary>
-    /// <param name="symbol">
-    /// The <see cref="CharSymbol" /> value.
+    /// <param name="symbols">
+    /// The symbols in the word.
     /// </param>
-    public CharTerminal(CharSymbol symbol)
-        : base(symbol)
+    public CharWord(IEnumerable<CharSymbol> symbols)
+        : base(symbols)
     {
     }
 
     /// <summary>
-    /// Casts a <paramref name="value" /> of type <see cref="char" /> to a <see cref="CharTerminal" />.
+    /// Initializes a new instance of <see cref="CharWord" />.
     /// </summary>
-    /// <param name="value">
-    /// The value to cast.
+    /// <param name="symbols">
+    /// The symbols in the word.
     /// </param>
-    public static implicit operator CharTerminal(char value) => new(value);
-
-    /// <summary>
-    /// Casts a <paramref name="terminal" /> of type <see cref="CharTerminal" /> to a <see cref="char" />.
-    /// </summary>
-    /// <param name="terminal">
-    /// The terminal to cast.
-    /// </param>
-    public static implicit operator char(CharTerminal terminal) => terminal.Symbol.Value;
+    public CharWord(IEnumerable<char> symbols)
+        : this(symbols.Select(s =>  new CharSymbol(s)))
+    {
+    }
 }

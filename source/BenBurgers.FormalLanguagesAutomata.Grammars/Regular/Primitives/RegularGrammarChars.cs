@@ -14,7 +14,7 @@
  */
 
 using BenBurgers.FormalLanguagesAutomata.Symbols;
-using BenBurgers.FormalLanguagesAutomata.Symbols.Primitives;
+using BenBurgers.FormalLanguagesAutomata.Symbols.Primitives.Char;
 
 namespace BenBurgers.FormalLanguagesAutomata.Grammars.Regular.Primitives;
 

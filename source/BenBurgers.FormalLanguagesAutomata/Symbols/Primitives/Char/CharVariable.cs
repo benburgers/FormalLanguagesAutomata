@@ -13,7 +13,7 @@
  * If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace BenBurgers.FormalLanguagesAutomata.Symbols.Primitives;
+namespace BenBurgers.FormalLanguagesAutomata.Symbols.Primitives.Char;
 
 /// <summary>
 /// A variable in a formal grammar that contains a <see cref="char" /> value.
